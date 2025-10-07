@@ -1,0 +1,16 @@
+/ (repo root)
+├─ index.html
+├─ 404.html
+├─ robots.txt
+├─ README.md
+├─ LICENSE
+├─ LICENSE-CONTENT
+├─ .gitignore
+├─ assets/
+│  ├─ icons/
+│  │  ├─ favicon.svg         ← you just created this
+│  │  └─ favicon.ico         ← optional fallback (add later)
+│  └─ images/
+│     └─ og-image.png        ← or og-image.svg/PNG later
+└─ pages/
+   └─ about.html
