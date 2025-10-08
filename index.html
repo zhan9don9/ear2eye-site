@@ -1,258 +1,101 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ear2Eye — Dong Zhang</title>
-
-  <meta name="description" content="Plain-English notes, DIY physics, and the Ear ↔ Eye framework: thinking in time (words) and space (pictures). By Dong Zhang." />
-  <meta name="keywords" content="ear2eye, Ear vs Eye, Dong Zhang, discrete physics, Young's experiment, Schrödinger’s Cat, photon birthday, ether, gravity, Zenodo" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ear2Eye — Dong Zhang" />
-  <meta property="og:description" content="Two languages of mind: Ear (time) & Eye (space). Papers, DIY experiments, and notes." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/images/og-image.png" />
-  <meta property="og:url" content="https://ear2eye.org" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ear2Eye — Dong Zhang" />
-  <meta name="twitter:description" content="Two languages of mind: Ear & Eye." />
-
-  <!-- Canonical + Favicon -->
-  <link rel="canonical" href="https://ear2eye.org/" />
-  <link rel="icon" href="/assets/icons/favicon.ico" />
-
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    .btn { @apply inline-flex items-center px-4 py-2 rounded-2xl shadow-sm hover:shadow transition; }
-    .card { @apply rounded-2xl shadow p-6 bg-white/80 backdrop-blur; }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ear2Eye — Dong Zhang</title>
+<meta name="description" content="Plain-English notes on the Ear ↔ Eye framework—words and pictures working together." />
+<link rel="canonical" href="https://ear2eye.org/" />
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+<meta property="og:title" content="Ear2Eye — Dong Zhang" />
+<meta property="og:description" content="Two languages of mind: Ear (time) & Eye (space). Essays, figures, and checklists." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/assets/images/og-image.svg" />
+<meta property="og:url" content="https://ear2eye.org" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .btn{ @apply inline-flex items-center px-4 py-2 rounded-2xl shadow-sm hover:shadow transition; }
+  .card{ @apply rounded-2xl shadow p-6 bg-white/80 backdrop-blur; }
+</style>
 </head>
 <body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
-  <!-- Top Bar -->
-  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="font-semibold">Ear2Eye</a>
-      <nav class="hidden md:flex gap-6">
-        <a href="#projects" class="hover:underline" data-i18n="nav-projects">Projects</a>
-        <a href="#papers" class="hover:underline" data-i18n="nav-papers">Papers</a>
-        <a href="#diy" class="hover:underline" data-i18n="nav-diy">DIY</a>
-        <a href="#notes" class="hover:underline" data-i18n="nav-notes">Notes</a>
-        <a href="/pages/about.html" class="hover:underline" data-i18n="nav-about">About</a>
-        <a href="#contact" class="hover:underline" data-i18n="nav-contact">Contact</a>
-      </nav>
-      <div class="flex items-center gap-2">
-        <button id="lang-en" class="btn text-sm" aria-label="Switch to English">EN</button>
-        <button id="lang-zh" class="btn text-sm" aria-label="切换到中文">中文</button>
-      </div>
-    </div>
-  </header>
+<header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b">
+  <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="font-semibold">Ear2Eye</a>
+    <nav class="hidden md:flex gap-6">
+      <a href="#essays" class="hover:underline">Essays</a>
+      <a href="#figures" class="hover:underline">Figures</a>
+      <a href="#tools" class="hover:underline">Checklists</a>
+      <a href="/pages/about.html" class="hover:underline">About</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section id="home" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4" data-i18n="hero-title">Two languages of mind: Ear & Eye</h1>
-        <p class="text-lg mb-6" data-i18n="hero-blurb">Ear is time (sequence, voice). Eye is space (layout, picture). I build simple models, DIY experiments, and plain-English notes to make both work together.</p>
-        <div class="flex gap-3">
-          <a href="#projects" class="btn bg-slate-900 text-white" data-i18n="btn-explore">Explore projects</a>
-          <a href="#papers" class="btn bg-white border" data-i18n="btn-papers">Papers</a>
-        </div>
-      </div>
-      <div>
-        <div class="card">
-          <h2 class="font-semibold mb-3" data-i18n="highlights">Highlights</h2>
-          <ul class="list-disc pl-6 space-y-2 text-sm">
-            <li data-i18n="hi-1">Young’s Experiment trilogy: pre-slit, in-slit, post-slit (with asymmetric slit results)</li>
-            <li data-i18n="hi-2">Schrödinger’s Cat, re-read with machine logic</li>
-            <li data-i18n="hi-3">Birthday of Photons (birth as a point in spacetime)</li>
-            <li data-i18n="hi-4">Electromagnetic ether & gravity notes</li>
-            <li data-i18n="hi-5">Languages of Ear & Eye (this site)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="max-w-4xl mx-auto px-4 py-14">
+  <p class="mb-3 text-xs text-slate-500">Physics moved to <a class="text-sky-700 underline" href="https://continuous2discrete.org/">continuous2discrete.org</a></p>
+  <h1 class="text-3xl md:text-5xl font-bold mb-3">Two languages of mind: Ear & Eye</h1>
+  <p class="text-lg mb-6">Ear is time (sequence, voice). Eye is space (layout, picture). This site shares plain-English notes, figures, and simple rules to make them work together.</p>
+  <div class="flex gap-3">
+    <a href="#essays" class="btn bg-slate-900 text-white">Read essays</a>
+    <a href="#tools" class="btn bg-white border">Checklists</a>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6" data-i18n="projects">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <article class="card">
-        <h3 class="text-xl font-semibold" data-i18n="prj-1-title">Young’s Double-Slit: Asymmetry & Hyperbolic Interference</h3>
-        <p class="mt-2 text-sm" data-i18n="prj-1-desc">DIY slits with different materials (copper/steel), asymmetric images, and a plain-English read of what happens inside the slit.</p>
-        <div class="mt-3 flex gap-3">
-          <a href="#papers" class="text-sky-700 hover:underline" data-i18n="read-paper">Read paper</a>
-          <a href="#diy" class="text-sky-700 hover:underline" data-i18n="see-diy">See DIY</a>
-        </div>
-      </article>
-      <article class="card">
-        <h3 class="text-xl font-semibold" data-i18n="prj-2-title">Schrödinger’s Cat — Three Versions & a Fix</h3>
-        <p class="mt-2 text-sm" data-i18n="prj-2-desc">A machine-logic look at the well-known thought experiment and what it hides about atoms and information.</p>
-        <div class="mt-3 flex gap-3">
-          <a href="#papers" class="text-sky-700 hover:underline" data-i18n="read-paper">Read paper</a>
-        </div>
-      </article>
-      <article class="card">
-        <h3 class="text-xl font-semibold" data-i18n="prj-3-title">Birthday of Photons</h3>
-        <p class="mt-2 text-sm" data-i18n="prj-3-desc">Why a photon’s birth is a point, and how that changes how we talk about redshift and speed of light.</p>
-        <div class="mt-3 flex gap-3">
-          <a href="#papers" class="text-sky-700 hover:underline" data-i18n="read-paper">Read paper</a>
-        </div>
-      </article>
-      <article class="card">
-        <h3 class="text-xl font-semibold" data-i18n="prj-4-title">Ear & Eye — A Plain-English Framework</h3>
-        <p class="mt-2 text-sm" data-i18n="prj-4-desc">Words + pictures, a simple pendulum model, and checklists for writing, teaching, and tools.</p>
-        <div class="mt-3 flex gap-3">
-          <a href="#papers" class="text-sky-700 hover:underline" data-i18n="read-paper">Read paper</a>
-        </div>
-      </article>
-    </div>
-  </section>
+<section id="essays" class="max-w-4xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6">
+  <article class="card">
+    <h3 class="font-semibold">Ear ↔ Eye: A Plain-English Framework</h3>
+    <p class="text-sm mt-1">Words + pictures, round-trip rule, and a simple pendulum model.</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">Writing Systems: Characters & Alphabet</h3>
+    <p class="text-sm mt-1">Meaning→shape vs sound→letters, and how they shape thinking.</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">Babel & Cangjie (Myth Notes)</h3>
+    <p class="text-sm mt-1">Two stories about splitting speech and inventing characters.</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">Proof & Spine-Figure</h3>
+    <p class="text-sm mt-1">If it can’t be said in steps and shown on one page, it’s not ready.</p>
+  </article>
+</section>
 
-  <!-- Papers -->
-  <section id="papers" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6" data-i18n="papers">Papers & Preprints</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="card">
-        <h3 class="font-semibold">Ear & Eye (concept note)</h3>
-        <p class="text-sm mt-1">Zenodo: <a class="text-sky-700 hover:underline" href="#">link</a></p>
-      </div>
-      <div class="card">
-        <h3 class="font-semibold">Asymmetric Slit (DIY + notes)</h3>
-        <p class="text-sm mt-1">Zenodo: <a class="text-sky-700 hover:underline" href="#">link</a></p>
-      </div>
-      <div class="card">
-        <h3 class="font-semibold">Hyperbolic Interference</h3>
-        <p class="text-sm mt-1">Zenodo / Preprint: <a class="text-sky-700 hover:underline" href="#">link</a></p>
-      </div>
-      <div class="card">
-        <h3 class="font-semibold">Schrödinger’s Cat — Three Versions</h3>
-        <p class="text-sm mt-1">Preprint: <a class="text-sky-700 hover:underline" href="#">link</a></p>
-      </div>
-    </div>
-  </section>
+<section id="figures" class="max-w-4xl mx-auto px-4 py-10">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-3">Figures</h2>
+    <ul class="list-disc pl-6 text-sm space-y-2">
+      <li>Pendulum gauge: Ear (−1) ↔ Eye (+1)</li>
+      <li>One-page “spine-figure” template</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- DIY -->
-  <section id="diy" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6" data-i18n="diy">DIY: Build & Test</h2>
-    <div class="card">
-      <ol class="list-decimal pl-6 space-y-2 text-sm">
-        <li data-i18n="diy-1">Cut copper and steel foils with factory edges; pair to form a slit.</li>
-        <li data-i18n="diy-2">Shine a safe laser through a single slit; capture images on paper/card.</li>
-        <li data-i18n="diy-3">Flip the slit; compare left/right asymmetry. Photograph both.</li>
-        <li data-i18n="diy-4">Write down setup (distance, laser type), then share images.</li>
-      </ol>
-      <p class="text-xs text-slate-500 mt-3" data-i18n="diy-note">Safety first. Use low-power lasers and proper eye protection.</p>
-    </div>
-  </section>
+<section id="tools" class="max-w-4xl mx-auto px-4 py-10">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-3">Checklists</h2>
+    <ul class="list-disc pl-6 text-sm space-y-2">
+      <li>Write: say-it / show-it match</li>
+      <li>Teach: lecture + sketch</li>
+      <li>Product: narrative view + map view</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- Notes -->
-  <section id="notes" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6" data-i18n="notes">Notes</h2>
-    <div class="space-y-4">
-      <article class="card">
-        <h3 class="font-semibold">Pendulum of Human History: Ear → Eye</h3>
-        <p class="text-sm mt-1">Short note on why the Ear era peaked and why we swing toward the Eye.</p>
-      </article>
-      <article class="card">
-        <h3 class="font-semibold">Proof & Spine-Figure</h3>
-        <p class="text-sm mt-1">If it can’t be said in steps and shown on one page, it’s not ready.</p>
-      </article>
-      <article class="card">
-        <h3 class="font-semibold">Continuous → Discrete (C2D)</h3>
-        <p class="text-sm mt-1">Short notes and pictures on how smooth ideas become step-by-step rules—and when to go back.</p>
-        <p class="text-sm mt-2"><a class="text-sky-700 hover:underline" href="/pages/c2d.html">Read C2D →</a></p>
-      </article>
-    </div>
-  </section>
+<section id="contact" class="max-w-4xl mx-auto px-4 py-14">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-2">Contact</h2>
+    <p class="text-sm">hello@ear2eye.org</p>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-3" data-i18n="contact">Contact</h2>
-        <p class="text-sm mb-3">Email: <a class="text-sky-700 hover:underline" href="mailto:hello@ear2eye.org">hello@ear2eye.org</a></p>
-        <form class="space-y-3" action="#" method="POST">
-          <input class="w-full border rounded-xl px-3 py-2" type="text" name="name" placeholder="Name" />
-          <input class="w-full border rounded-xl px-3 py-2" type="email" name="email" placeholder="Email" />
-          <textarea class="w-full border rounded-xl px-3 py-2" name="message" rows="4" placeholder="Message"></textarea>
-          <button class="btn bg-slate-900 text-white" type="submit" data-i18n="send">Send</button>
-        </form>
-      </div>
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-3" data-i18n="subscribe">Subscribe (email)</h2>
-        <p class="text-sm mb-3" data-i18n="subscribe-note">No spam. Notes and project updates in both English and Simplified Chinese.</p>
-        <a class="btn bg-white border" href="#" target="_blank" rel="noopener" data-i18n="subscribe-btn">Subscribe via Buttondown</a>
-        <div class="mt-4">
-          <a class="text-sky-700 hover:underline" href="#" target="_blank" rel="noopener" data-i18n="youtube">YouTube channel</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer class="border-t">
+  <div class="max-w-4xl mx-auto px-4 py-8 text-sm flex items-center justify-between">
+    <span>© <span id="year"></span> Dong Zhang · CC BY 4.0</span>
+    <a href="#" class="hover:underline">Back to top</a>
+  </div>
+</footer>
 
-  <footer class="border-t">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm flex items-center justify-between">
-      <span>© <span id="year"></span> Dong Zhang · CC BY 4.0</span>
-      <a href="#home" class="hover:underline" data-i18n="back-top">Back to top</a>
-    </div>
-  </footer>
-
-  <!-- Language strings -->
-  <script>
-    const STR = {
-      en: {
-        'nav-projects': 'Projects', 'nav-papers': 'Papers', 'nav-diy': 'DIY', 'nav-notes': 'Notes', 'nav-about': 'About', 'nav-contact': 'Contact',
-        'hero-title': 'Two languages of mind: Ear & Eye',
-        'hero-blurb': 'Ear is time (sequence, voice). Eye is space (layout, picture). I build simple models, DIY experiments, and plain-English notes to make both work together.',
-        'btn-explore': 'Explore projects', 'btn-papers': 'Papers',
-        'highlights': 'Highlights',
-        'hi-1': 'Young’s Experiment trilogy: pre-slit, in-slit, post-slit (with asymmetric slit results)',
-        'hi-2': 'Schrödinger’s Cat, re-read with machine logic',
-        'hi-3': 'Birthday of Photons (birth as a point in spacetime)',
-        'hi-4': 'Electromagnetic ether & gravity notes',
-        'hi-5': 'Languages of Ear & Eye (this site)',
-        'projects': 'Projects', 'papers': 'Papers & Preprints', 'diy': 'DIY: Build & Test', 'notes': 'Notes', 'contact': 'Contact',
-        'read-paper': 'Read paper', 'see-diy': 'See DIY', 'diy-1': 'Cut copper and steel foils with factory edges; pair to form a slit.', 'diy-2': 'Shine a safe laser through a single slit; capture images on paper/card.', 'diy-3': 'Flip the slit; compare left/right asymmetry. Photograph both.', 'diy-4': 'Write down setup (distance, laser type), then share images.', 'diy-note': 'Safety first. Use low-power lasers and proper eye protection.',
-        'send': 'Send', 'subscribe': 'Subscribe (email)', 'subscribe-note': 'No spam. Notes and project updates in both English and Simplified Chinese.', 'subscribe-btn': 'Subscribe via Buttondown', 'youtube': 'YouTube channel', 'back-top': 'Back to top'
-      },
-      zh: {
-        'nav-projects': '项目', 'nav-papers': '论文', 'nav-diy': '动手做', 'nav-notes': '笔记', 'nav-about': '关于', 'nav-contact': '联系',
-        'hero-title': '心智的两种语言：耳与眼',
-        'hero-blurb': '耳朵属于时间（次序、声音），眼睛属于空间（布局、图像）。我用简单模型、DIY 实验和通俗语言，把两者配合起来。',
-        'btn-explore': '进入项目', 'btn-papers': '论文',
-        'highlights': '亮点',
-        'hi-1': '杨氏实验三部曲：入缝前、缝内、出缝后（含非对称单缝结果）',
-        'hi-2': '薛定谔的猫：用机器逻辑重新解读',
-        'hi-3': '光子的“生日”（诞生为时空中的一个点）',
-        'hi-4': '电磁以太与引力随笔',
-        'hi-5': '耳与眼的语言（本站）',
-        'projects': '项目', 'papers': '论文与预印本', 'diy': '动手做：搭与测', 'notes': '笔记', 'contact': '联系',
-        'read-paper': '阅读论文', 'see-diy': '查看 DIY', 'diy-1': '将铜箔与钢箔按工厂切边配对，形成狭缝。', 'diy-2': '用安全激光器照向单缝；在纸卡上成像。', 'diy-3': '翻转狭缝；比较左右不对称，并拍照记录。', 'diy-4': '记录距离与激光类型等参数，并分享图片。', 'diy-note': '注意安全，使用低功率激光并做好眼部防护。',
-        'send': '发送', 'subscribe': '订阅（邮件）', 'subscribe-note': '不骚扰。英文与简体中文双语更新。', 'subscribe-btn': '通过 Buttondown 订阅', 'youtube': 'YouTube 频道', 'back-top': '回到顶部'
-      }
-    };
-
-    const $ = (sel) => document.querySelector(sel);
-    const $$ = (sel) => Array.from(document.querySelectorAll(sel));
-    const applyLang = (lang) => {
-      const dict = STR[lang] || STR.en;
-      $$('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (dict[key]) el.textContent = dict[key];
-      });
-      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-      localStorage.setItem('lang', lang);
-    };
-
-    $('#lang-en').addEventListener('click', () => applyLang('en'));
-    $('#lang-zh').addEventListener('click', () => applyLang('zh'));
-    document.getElementById('year').textContent = new Date().getFullYear();
-    applyLang(localStorage.getItem('lang') || 'en');
-  </script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
