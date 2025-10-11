@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>耳与眼 — Dong Zhang</title>
+<meta name="description" content="“耳 ↔ 眼”通俗框架：文字与图像如何配合。">
+<link rel="canonical" href="https://ear2eye.org/zh/" />
+<link rel="alternate" hreflang="en" href="https://ear2eye.org/" />
+<link rel="alternate" hreflang="zh-CN" href="https://ear2eye.org/zh/" />
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+<meta property="og:title" content="耳与眼 — Dong Zhang" />
+<meta property="og:description" content="两种心智语言：耳（时间）与眼（空间）。短文、图示与清单。" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/assets/images/og-image.svg" />
+<meta property="og:url" content="https://ear2eye.org/zh/" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>.btn{ @apply inline-flex items-center px-4 py-2 rounded-2xl shadow-sm hover:shadow transition; } .card{ @apply rounded-2xl shadow p-6 bg-white/80 backdrop-blur; }</style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+<header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b">
+  <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/zh/" class="font-semibold">耳与眼</a>
+    <nav class="hidden md:flex gap-6">
+      <a href="#essays" class="hover:underline">文章</a>
+      <a href="#figures" class="hover:underline">图示</a>
+      <a href="#tools" class="hover:underline">清单</a>
+      <a href="/pages/about.html" class="hover:underline">About</a>
+      <a href="#contact" class="hover:underline">联系</a>
+    </nav>
+    <a class="text-sm underline" href="/">English</a>
+  </div>
+</header>
+
+<section class="max-w-4xl mx-auto px-4 py-14">
+  <p class="mb-3 text-xs text-slate-500">物理内容在 <a class="text-sky-700 underline" href="https://continuous2discrete.org/">continuous2discrete.org</a></p>
+  <h1 class="text-3xl md:text-5xl font-bold mb-3">心智的两种语言：耳与眼</h1>
+  <p class="text-lg mb-6">耳属于时间（次序、声音），眼属于空间（布局、图像）。本页用通俗文字、图示与简单规则，让两者配合。</p>
+  <div class="flex gap-3">
+    <a href="#essays" class="btn bg-slate-900 text-white">阅读文章</a>
+    <a href="#tools" class="btn bg-white border">检查清单</a>
+  </div>
+</section>
+
+<section id="essays" class="max-w-4xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6">
+  <article class="card">
+    <h3 class="font-semibold">耳 ↔ 眼：通俗框架</h3>
+    <p class="text-sm mt-1">文字 + 图像，往返规则，一个简单的“钟摆”。</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">文字系统：字形与字母</h3>
+    <p class="text-sm mt-1">“义→形”与“音→字母”，以及它们如何影响思维。</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">巴别与仓颉（神话札记）</h3>
+    <p class="text-sm mt-1">两个关于分裂言语与造字的故事。</p>
+  </article>
+  <article class="card">
+    <h3 class="font-semibold">证明与“脊柱图”</h3>
+    <p class="text-sm mt-1">说得清步骤、画得下一页，才算准备好。</p>
+  </article>
+</section>
+
+<section id="figures" class="max-w-4xl mx-auto px-4 py-10">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-3">图示</h2>
+    <ul class="list-disc pl-6 text-sm space-y-2">
+      <li>钟摆刻度：耳（−1）↔ 眼（+1）</li>
+      <li>一页“脊柱图”模板</li>
+    </ul>
+  </div>
+</section>
+
+<section id="tools" class="max-w-4xl mx-auto px-4 py-10">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-3">清单</h2>
+    <ul class="list-disc pl-6 text-sm space-y-2">
+      <li>写作：说清 / 画清 对齐</li>
+      <li>教学：讲解 + 草图</li>
+      <li>产品：叙事视图 + 地图视图</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="max-w-4xl mx-auto px-4 py-14">
+  <div class="card">
+    <h2 class="text-xl font-semibold mb-2">联系</h2>
+    <p class="text-sm"><a class="text-sky-700 underline" href="mailto:hello@ear2eye.org">hello@ear2eye.org</a></p>
+  </div>
+</section>
+
+<footer class="border-t">
+  <div class="max-w-4xl mx-auto px-4 py-8 text-sm flex items-center justify-between">
+    <span>© <span id="year"></span> Dong Zhang · CC BY 4.0</span>
+    <a href="#" class="hover:underline">回到顶部</a>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 pb-8 text-xs text-slate-600">
+    物理笔记在 <a class="underline" href="https://continuous2discrete.org/">continuous2discrete.org</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
